@@ -11,6 +11,7 @@ enum TimerState {
     case suspended
     case resumed
     case canceled
+    case finished
 }
 
 protocol RepeatingSecondsTimer {
@@ -29,7 +30,8 @@ final class RepeatingSecondsTimerImpl: RepeatingSecondsTimer {
     var timerState = TimerState.suspended
     private var repeatingExecution: (() -> Void)?
     private var completion: (() -> Void)?
-    private var timers: (repeatTimer: DispatchSourceTimer?, nonRepeatTimer: DispatchSourceTimer?) = (DispatchSource.makeTimerSource(), DispatchSource.makeTimerSource())
+    private var timers: (repeatTimer: DispatchSourceTimer?, nonRepeatTimer: DispatchSourceTimer?) = (DispatchSource.makeTimerSource(),
+                                                                                                     DispatchSource.makeTimerSource())
     
     deinit {
         removeTimer()
@@ -58,10 +60,15 @@ final class RepeatingSecondsTimerImpl: RepeatingSecondsTimer {
         timers.repeatTimer?.suspend()
         timers.nonRepeatTimer?.suspend()
     }
-    
+
     func cancel() {
         timerState = .canceled
         initTimer()
+    }
+
+    private func finish() {
+        timerState = .finished
+        cancel()
     }
     
     private func setTimer(durationSeconds: Double,
@@ -77,7 +84,7 @@ final class RepeatingSecondsTimerImpl: RepeatingSecondsTimer {
         
         timers.nonRepeatTimer?.schedule(deadline: .now() + durationSeconds)
         timers.nonRepeatTimer?.setEventHandler { [weak self] in
-            self?.timers.repeatTimer?.cancel()
+            self?.finish()
             completion?()
         }
     }

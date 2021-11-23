@@ -118,7 +118,7 @@ class ViewController: UIViewController {
         startRepeatTimer()
         setTimerButtonsUsingTimerState()
     }
-    
+
     @objc func didTapResumeRepeatTimerButton() {
         repeatingSecondsTimer.resume()
         setTimerButtonsUsingTimerState()
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         repeatingSecondsTimer.suspend()
         setTimerButtonsUsingTimerState()
     }
-    
+
     @objc func didTapCancelTimerButton() {
         repeatingSecondsTimer.cancel()
         setTimerButtonsUsingTimerState()
@@ -165,6 +165,7 @@ class ViewController: UIViewController {
             resumeRepeatTimerButton.isHidden = true
             countDownLabel.text = "타이머 취소"
             time = 0
+        case .finished: break
         }
     }
     
