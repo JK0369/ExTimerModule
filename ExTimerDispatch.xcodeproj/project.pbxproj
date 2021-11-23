@@ -12,7 +12,7 @@
 		4A95A9F4274D34360057EF0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A95A9F3274D34360057EF0E /* ViewController.swift */; };
 		4A95A9F9274D34370057EF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A95A9F8274D34370057EF0E /* Assets.xcassets */; };
 		4A95A9FC274D34370057EF0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A95A9FA274D34370057EF0E /* LaunchScreen.storyboard */; };
-		4A95AA20274D344E0057EF0E /* RepeatingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A95AA1F274D344E0057EF0E /* RepeatingTimer.swift */; };
+		4A95AA20274D344E0057EF0E /* RepeatingSecondsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A95AA1F274D344E0057EF0E /* RepeatingSecondsTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 		4A95A9FD274D34370057EF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A95AA02274D34370057EF0E /* ExTimerDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExTimerDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A95AA0C274D34370057EF0E /* ExTimerDispatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExTimerDispatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A95AA1F274D344E0057EF0E /* RepeatingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingTimer.swift; sourceTree = "<group>"; };
+		4A95AA1F274D344E0057EF0E /* RepeatingSecondsTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingSecondsTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				4A95A9EF274D34360057EF0E /* AppDelegate.swift */,
 				4A95A9F1274D34360057EF0E /* SceneDelegate.swift */,
 				4A95A9F3274D34360057EF0E /* ViewController.swift */,
-				4A95AA1F274D344E0057EF0E /* RepeatingTimer.swift */,
+				4A95AA1F274D344E0057EF0E /* RepeatingSecondsTimer.swift */,
 				4A95A9F8274D34370057EF0E /* Assets.xcassets */,
 				4A95A9FA274D34370057EF0E /* LaunchScreen.storyboard */,
 				4A95A9FD274D34370057EF0E /* Info.plist */,
@@ -235,7 +235,7 @@
 				4A95A9F4274D34360057EF0E /* ViewController.swift in Sources */,
 				4A95A9F0274D34360057EF0E /* AppDelegate.swift in Sources */,
 				4A95A9F2274D34360057EF0E /* SceneDelegate.swift in Sources */,
-				4A95AA20274D344E0057EF0E /* RepeatingTimer.swift in Sources */,
+				4A95AA20274D344E0057EF0E /* RepeatingSecondsTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

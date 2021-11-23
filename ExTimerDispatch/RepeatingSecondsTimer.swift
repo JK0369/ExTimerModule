@@ -1,5 +1,5 @@
 //
-//  RepeatingTimer.swift
+//  RepeatingSecondsTimer.swift
 //  ExTimerDispatch
 //
 //  Created by 김종권 on 2021/11/23.
