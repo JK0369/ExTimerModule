@@ -99,6 +99,9 @@ final class RepeatingSecondsTimerImpl: RepeatingSecondsTimer {
     
     private func removeTimer() {
         // cancel()을 한번 실행하면 timer를 다시 사용할 수 없는 상태임을 주의
+        // cancel()을 할땐 resume()을 호출한 후 해야 크래시가 나지 않고 정상 취소가 가능
+        timers.repeatTimer?.resume()
+        timers.nonRepeatTimer?.resume()
         timers.repeatTimer?.cancel()
         timers.nonRepeatTimer?.cancel()
         initTimer()
